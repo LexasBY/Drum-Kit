@@ -1,3 +1,4 @@
+
 function removeTransition(e) {
   if (e.propertyName !== 'transform') return;
   e.target.classList.remove('playing');
@@ -15,4 +16,11 @@ function playSound(e) {
 
 const keys = Array.from(document.querySelectorAll('.key'));
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-window.addEventListener('keydown', playSound);
+document.addEventListener('keydown', playSound);
+
+
+//Try to add mouse control
+document.addEventListener('click', (e) => {
+  console.log(e);
+  playSound;
+});
